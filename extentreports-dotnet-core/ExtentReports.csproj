@@ -15,7 +15,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Extent Reporting Framework (.Net Standard), Community Edition Modified version of Extent Reporting Framework Fail method fixed version</Description>
     <Copyright>AventStack</Copyright>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/extent-framework/extentreports-csharp/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseUrl>https://licenses.nuget.org/Apache-2.0</PackageLicenseUrl>
     <PackageProjectUrl>http://extentreports.com</PackageProjectUrl>
     <RepositoryUrl>https://github.com/namilkimfree/extentreports-csharp</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
