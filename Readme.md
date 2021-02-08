@@ -1,5 +1,8 @@
 ### Fixed Issue 
 
+
+
+##ExtentReports.BugFix 4.1.1
 * fixed: when i call the Fail method, the Test status is pass . (https://github.com/extent-framework/extentreports-csharp/issues/89)
 * Published this package in nuget. nuget link: https://www.nuget.org/packages/ExtentReports.BugFix/4.1.1
 
