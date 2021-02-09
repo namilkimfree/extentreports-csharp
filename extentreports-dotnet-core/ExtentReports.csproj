@@ -3,7 +3,9 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>ExtentReports.BugFix </PackageId>
-    <PackageTags>extentreports extent reporting fail method fixed version</PackageTags>
+    <PackageTags>
+      ExtentReports BugFix Modified extentreports extent reporting
+    </PackageTags>
     <RootNamespace>AventStack.ExtentReports</RootNamespace>
     <AssemblyName>ExtentReports</AssemblyName>
     <Version>4.1.2</Version>
@@ -13,14 +15,17 @@
     <OutputType>Library</OutputType>
     <StartupObject></StartupObject>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Description>Extent Reporting Framework (.Net Standard), Community Edition Modified version of Extent Reporting Framework Fail method fixed version</Description>
+    <Description>Extent Reporting Framework (.Net Standard), Community Edition Modified version</Description>
     <Copyright>AventStack</Copyright>
     <PackageLicenseUrl>https://licenses.nuget.org/Apache-2.0</PackageLicenseUrl>
     <PackageProjectUrl>http://extentreports.com</PackageProjectUrl>
     <RepositoryUrl>https://github.com/namilkimfree/extentreports-csharp</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>fail method is not set status fixed </PackageReleaseNotes>
+    <PackageReleaseNotes>
+      - Fixed an issue where the status was displayed as success when an exception occurred in the report page
+      - Fixed an issue where only the Exception Call Stack was displayed on the report detail page and no Exception message was displayed.
+    </PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
