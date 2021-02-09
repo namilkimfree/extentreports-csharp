@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-	<PackageId>ExtentReports.BugFix </PackageId>
-	<PackageTags>extentreports extent reporting fail method fixed version</PackageTags>
+    <PackageId>ExtentReports.BugFix </PackageId>
+    <PackageTags>extentreports extent reporting fail method fixed version</PackageTags>
     <RootNamespace>AventStack.ExtentReports</RootNamespace>
     <AssemblyName>ExtentReports</AssemblyName>
-    <Version>4.1.1</Version>
-    <Company>Simply Bug FIx</Company>
-    <Authors>Simply Bug FIx</Authors>
+    <Version>4.1.2</Version>
+    <Company>Namil Kim Free</Company>
+    <Authors>Namil Kim Free</Authors>
     <ApplicationIcon />
     <OutputType>Library</OutputType>
     <StartupObject></StartupObject>
