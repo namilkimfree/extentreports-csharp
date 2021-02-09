@@ -12,20 +12,19 @@
 			<tr class="event-row">
 				<td><i class="fa fa-@TWBSIcon.GetIcon(log.Status) text-@log.Status.ToString().ToLower()"></i></td>
 				<td>@log.Timestamp.ToString("HH:mm:ss")</td>
-				<td>
-					@if (log.HasException)
-					{
-						<textarea disabled class="code-block">@log.ExceptionInfo.Exception.StackTrace</textarea>
-					}
-					else
-					{
-						@Raw(log.Details)
-					}
-					@if (log.HasScreenCapture)
-					{
-						@Raw(log.ScreenCaptureContext.FirstOrDefault().Source)
-					}
-				</td>
+                <td>
+                    @Raw(log.Details)
+
+                    @if (log.HasException)
+                    {
+                        <textarea disabled class="code-block">@log.ExceptionInfo.Exception.StackTrace</textarea>
+                    }
+
+                    @if (log.HasScreenCapture)
+                    {
+                        @Raw(log.ScreenCaptureContext.FirstOrDefault().Source)
+                    }
+                </td>
 			</tr>
 		}
 	</tbody>
