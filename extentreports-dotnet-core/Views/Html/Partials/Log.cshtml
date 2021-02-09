@@ -13,11 +13,14 @@
 				<td><i class="fa fa-@TWBSIcon.GetIcon(log.Status) text-@log.Status.ToString().ToLower()"></i></td>
 				<td>@log.Timestamp.ToString("HH:mm:ss")</td>
                 <td>
-                    @Raw(log.Details)
-
                     @if (log.HasException)
                     {
+                        <span class="test-status text-@log.Status.ToString().ToLower()">@log.ExceptionInfo.Exception.Message</span>
                         <textarea disabled class="code-block">@log.ExceptionInfo.Exception.StackTrace</textarea>
+                    }
+                    else
+                    {
+                        @Raw(log.Details)
                     }
 
                     @if (log.HasScreenCapture)
