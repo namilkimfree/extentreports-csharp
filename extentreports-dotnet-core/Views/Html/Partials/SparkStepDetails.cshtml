@@ -4,7 +4,9 @@
 	{
 		if (log.HasException)
 		{
-            <span class="test-status text-@log.Status.ToString().ToLower()">@log.ExceptionInfo.Exception.Message</span>
+            <div class="details">
+                <span class="test-status text-@log.Status.ToString().ToLower()">@log.ExceptionInfo.Exception.Message</span>
+            </div>
 			<textarea disabled class="code-block">@log.ExceptionInfo.Exception.StackTrace</textarea>
 		}
 		else

@@ -110,102 +110,104 @@
 		</div>
 		}
 	</div>
-	<div class="row">
-		<div class="col-md-3">
-			<div class="card">
-				<div class="card-body box-height-150">
-	                <div class="media justify-content-between">
-						<div>
-							<h6 class="card-title">@parentHeading</h6>
-							<h2 class="font-size-28 font-weight-light">@Model.ReportStatusStats.ParentCount</h2>
-							<span class="text-semibold text-success font-size-15">
-							<i class="ti-arrow-up font-size-11"></i> 
-								<span>@Math.Round(Model.ReportStatusStats.ParentPercentagePass, 2)%</span>
-							</span>
-						</div>
-						<div class="align-self-end">
-							<i class="fa fa-align-left font-size-70 opacity-01"></i>
-						</div>
-					</div>
-	            </div>
-			</div>
-		</div>
-		@if (Model.ReportStatusStats.ChildCount > 0)
-		{
-		<div class="col-md-3">
-			<div class="card">
-				<div class="card-body box-height-150">
-	                <div class="media justify-content-between">
-						<div>
-							<h6 class="card-title">@childHeading</h6>
-							<h2 class="font-size-28 font-weight-light">@Model.ReportStatusStats.ChildCount</h2>
-							<span class="text-semibold text-success font-size-15">
-							<i class="ti-arrow-up font-size-11"></i> 
-								<span>@Math.Round(Model.ReportStatusStats.ChildPercentagePass, 2)%</span>
-							</span>
-						</div>
-						<div class="align-self-end">
-							<i class="fa fa-align-left font-size-70 opacity-01"></i>
-						</div>
-					</div>
-	            </div>
-			</div>
-		</div>
-		}
-		<div class="col-md-3">
-			<div class="card">
-				<div class="card-body box-height-150">
-	                <div class="media justify-content-between">
-						<div>
-							<h6 class="card-title">Start</h6>
-							<h6 class="font-weight-light">@Model.StartTime</h6>
-							<span class="text-semibold text-success font-size-15">
-						</div>
-						<div class="align-self-end">
-							<i class="fa fa-clock-o font-size-70 text-success opacity-01"></i>
-						</div>
-					</div>
-	            </div>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="card">
-				<div class="card-body box-height-150">
-	                <div class="media justify-content-between">
-						<div>
-							<h6 class="card-title">Duration</h6>
-							<h6 class="font-weight-light">@Model.EndTime.Subtract(Model.StartTime)</h6>
-							<span class="text-semibold text-danger font-size-15">
-						</div>
-						<div class="align-self-end">
-							<i class="fa fa-clock-o font-size-70 text-danger opacity-01"></i>
-						</div>
-					</div>
-	            </div>
-			</div>
-		</div>
-		@if (Model.ReportStatusStats.ChildCount == 0)
-		{
-		<div class="col-md-3">
-			<div class="card">
-				<div class="card-body box-height-150">
-	                <div class="media justify-content-between">
-						<div>
-							<p class="">Duration</p>
-							<h6 class="font-weight-light">@runDuration</h6>
-							<span class="text-semibold font-size-15">
-						</div>
-						<div class="align-self-end">
-							<i class="fa fa-clock-o font-size-70 text-danger opacity-01"></i>
-						</div>
-					</div>
-	            </div>
-			</div>
-		</div>
-		}
-	</div>
-	@if (Model.MasterConfig.GetValue("enableTimeline") == "true")
-	{
+<div class="row">
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body box-height-150">
+                <div class="media justify-content-between">
+                    <div>
+                        <h6 class="card-title">@parentHeading</h6>
+                        <h2 class="font-size-28 font-weight-light">@Model.ReportStatusStats.ParentCount</h2>
+                        <span class="text-semibold text-success font-size-15">
+                            <i class="ti-arrow-up font-size-11"></i> 
+                            <span>@Math.Round(Model.ReportStatusStats.ParentPercentagePass, 2)%</span>
+                        </span>
+                    </div>
+                    <div class="align-self-end">
+                        <i class="fa fa-align-left font-size-70 opacity-01"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @if (Model.ReportStatusStats.ChildCount > 0)
+    {
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body box-height-150">
+                    <div class="media justify-content-between">
+                        <div>
+                            <h6 class="card-title">@childHeading</h6>
+                            <h2 class="font-size-28 font-weight-light">@Model.ReportStatusStats.ChildCount</h2>
+                            <span class="text-semibold text-success font-size-15">
+                                <i class="ti-arrow-up font-size-11"></i> 
+                                <span>@Math.Round(Model.ReportStatusStats.ChildPercentagePass, 2)%</span>
+                            </span>
+                        </div>
+                        <div class="align-self-end">
+                            <i class="fa fa-align-left font-size-70 opacity-01"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body box-height-150">
+                <div class="media justify-content-between">
+                    <div>
+                        <h6 class="card-title">Start</h6>
+                        <h6 class="font-weight-light">@Model.StartTime</h6>
+                        <span class="text-semibold text-success font-size-15">
+                    </div>
+                    <div class="align-self-end">
+                        <i class="fa fa-clock-o font-size-70 text-success opacity-01"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body box-height-150">
+                <div class="media justify-content-between">
+                    <div>
+                        <h6 class="card-title">Duration</h6>
+                        <h6 class="font-weight-light">@Model.EndTime.Subtract(Model.StartTime)</h6>
+                        <span class="text-semibold text-danger font-size-15">
+                    </div>
+                    <div class="align-self-end">
+                        <i class="fa fa-clock-o font-size-70 text-danger opacity-01"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @if (Model.ReportStatusStats.ChildCount == 0)
+    {
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body box-height-150">
+                    <div class="media justify-content-between">
+                        <div>
+                            <p class="">Duration</p>
+                            <h6 class="font-weight-light">@runDuration</h6>
+                            <span class="text-semibold font-size-15">
+                        </div>
+                        <div class="align-self-end">
+                            <i class="fa fa-clock-o font-size-70 text-danger opacity-01"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+	
+	@if (Model.MasterConfig.GetValue("enableTimeline").ToLower() == "true")
+    {
 	<div class="row">
 		<div class="col-md-12">
 			<div class="card timeline">
@@ -390,7 +392,7 @@
 		exceptionsGrandChild: @Model.ReportStatusStats.GrandChildCountExceptions,
 	};
 </script>
-@if (Model.MasterConfig.GetValue("enableTimeline") == "true")
+@if (Model.MasterConfig.GetValue("enableTimeline").ToLower() == "true")
 {
 		var json = "";
 		for (int ix = 0; ix < Model.TestList.Count; ix++) {
