@@ -1,4 +1,6 @@
 
+### Fixed Issue 
+
 ## ExtentReports.BugFix 4.2.2
 * Published this package in nuget. nuget link: https://www.nuget.org/packages/ExtentReports.BugFix/4.2.2
 * fixed: an issue timeline is not displayed when timeline set to true
