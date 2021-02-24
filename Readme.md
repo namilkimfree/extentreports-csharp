@@ -1,6 +1,14 @@
+
+### Feat Function
+
+## ExtentReports.BugFix 4.2.1
+* Published this package in nuget. nuget link: https://www.nuget.org/packages/ExtentReports.BugFix/4.2.1
+* fixed: an issue where only the Exception Call Stack was displayed on the report detail page and no Exception message was displayed.
+![alt text](https://github.com/namilkimfree/extentreports-csharp/blob/image_assets/extentreports-dotnet-core/ImageAssets/exception%20message.jpg)
+
+
+
 ### Fixed Issue 
-
-
 
 ## ExtentReports.BugFix 4.1.1
 * fixed: when i call the Fail method, the Test status is pass . (https://github.com/extent-framework/extentreports-csharp/issues/89)
