@@ -7,12 +7,12 @@
 	{
 	<div class="card">
 		<div class="card-header" role="tab">
-			<div class="card-title pl-3">
-				<div class="node">@node.BehaviorDrivenTypeName: @node.Name</div>
-				<div class="status-avatar float-left @node.Status.ToString().ToLower()-bg">
-					<i class="fa fa-@TWBSIcon.GetIcon(node.Status) text-white"></i>
-				</div>
-			</div>
+            <div class="card-title pl-3">
+                <div class="status-avatar float-left @node.Status.ToString().ToLower()-bg">
+                    <i class="fa fa-@TWBSIcon.GetIcon(node.Status) text-white"></i>
+                </div>
+                <div class="node" style="word-break: break-all; word-wrap: break-word;">@node.BehaviorDrivenTypeName: @node.Name</div>
+            </div>
 		</div>
 		@if (node.HasChildren)
 		{
