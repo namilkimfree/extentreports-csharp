@@ -6,6 +6,22 @@
 * fixed: an issue remove test doesn't test in ExtentTest class
 * feat: a razor engine template encoding type add
 * feat: a sparkdashboard [feature, scenario and step] chart's accordion collaspse/expand feature added
+![alt text](https://github.com/namilkimfree/extentreports-csharp/blob/image_assets/extentreports-dotnet-core/ImageAssets/accordion%20chart.jpg)
+
+
+* EncodedStringFactory 
+```csharp
+//Raw is default value
+var htmlReporter = new ExtentHtmlReporter(Path.Combine(path),EncodedStringFactory.RawStringFactory); // Raw string encoding. 
+var htmlReporter = new ExtentHtmlReporter(Path.Combine(path),EncodedStringFactory.HtmlEncodedStringFactory); //Html encoding
+```
+* SparkDashboardSPA Chart accrodion 
+
+```csharp
+var htmlReporter = new ExtentHtmlReporter(Path.Combine(path));
+// default value is none
+htmlReporter.Config.DashboardStyle = DashboardStyle.AccordionChart; 
+```
 
 
 ## ExtentReports.BugFix 4.2.2
