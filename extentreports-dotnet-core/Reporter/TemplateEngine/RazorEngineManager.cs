@@ -10,13 +10,23 @@ namespace AventStack.ExtentReports.Reporter.TemplateEngine
     internal sealed class RazorEngineManager
     {
         private bool _initialized = false;
+        private EncodedStringFactory _encodedStringFactory = EncodedStringFactory.RawStringFactory;
+        public IRazorEngineService Razor => Engine.Razor;
 
-        public IRazorEngineService Razor
+        internal EncodedStringFactory EncodedStringFactory
         {
-            get
+            set
             {
-                return Engine.Razor;
+                _encodedStringFactory = value;
+                ChangeEncodedStringFactory(_encodedStringFactory);
             }
+        }
+
+        private void ChangeEncodedStringFactory(EncodedStringFactory encodedStringFactory)
+        {
+            _initialized = false;
+            _encodedStringFactory = encodedStringFactory;
+            InitializeRazor();
         }
 
         internal void InitializeRazor()
@@ -24,17 +34,37 @@ namespace AventStack.ExtentReports.Reporter.TemplateEngine
             if (_initialized)
                 return;
 
-            TemplateServiceConfiguration templateConfig = new TemplateServiceConfiguration
+            TemplateServiceConfiguration templateConfig = new TemplateServiceConfiguration()
             {
                 DisableTempFileLocking = true,
-                EncodedStringFactory = new RawStringFactory(),
+                EncodedStringFactory = GetEncodedStringFactory(),
                 CachingProvider = new DefaultCachingProvider(x => { })
             };
+
             var service = RazorEngineService.Create(templateConfig);
             Engine.Razor = service;
 
             _initialized = true;
-        }
+
+            IEncodedStringFactory GetEncodedStringFactory()
+            {
+                IEncodedStringFactory encodedStringFactory;
+
+                switch (_encodedStringFactory)
+                {
+                    case EncodedStringFactory.RawStringFactory:
+                        encodedStringFactory = new RawStringFactory();
+                        break;
+                    case EncodedStringFactory.HtmlEncodedStringFactory:
+                        encodedStringFactory = new HtmlEncodedStringFactory();
+                        break;
+                    default:
+                        throw new InvalidOperationException();
+                }
+
+                return encodedStringFactory;
+            }
+        } 
 
         private static readonly Lazy<RazorEngineManager> lazy =
         new Lazy<RazorEngineManager>(() => new RazorEngineManager());

@@ -18,14 +18,31 @@ namespace AventStack.ExtentReports.Reporter
         private static readonly string HtmlTemplateFolderPath = Path.Combine(TemplateFolderPath, "Html");
         private ViewStyle _viewStyle = ViewStyle.SPA;
 
+        private EncodedStringFactory _encodedStringFactory
+        {
+            set => RazorEngineManager.Instance.EncodedStringFactory = value;
+        }
+
         public ExtentHtmlReporter(string folderPath) : base(folderPath)
         {
             Config = new ExtentHtmlReporterConfiguration(this);
+            
             Initialize(Config);
         }
 
         public ExtentHtmlReporter(string folderPath, ViewStyle viewStyle) : this(folderPath)
         {
+            _viewStyle = viewStyle;
+        }
+
+        public ExtentHtmlReporter(string folderPath, EncodedStringFactory encodedStringFactory) : this(folderPath)
+        {
+            _encodedStringFactory = encodedStringFactory;
+        }
+
+        public ExtentHtmlReporter(string folderPath, ViewStyle viewStyle, EncodedStringFactory encodedStringFactory) : this(folderPath)
+        {
+            _encodedStringFactory = encodedStringFactory;
             _viewStyle = viewStyle;
         }
 

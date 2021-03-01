@@ -68,7 +68,7 @@ namespace AventStack.ExtentReports.Model
         {
             lock (_syncLock)
             {
-                _list.ToList().Remove(t);
+                _list.Remove(t);
             }
         }
 

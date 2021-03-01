@@ -58,6 +58,12 @@ namespace AventStack.ExtentReports
             Extent.AddNode(node.Model);
         }
 
+        private void ApplyRemoveCommonNodeSettings(ExtentTest node)
+        {
+            node.Model.Parent = null;
+            Model.NodeContext.Remove(node.Model);
+        }
+
         public ExtentTest CreateNode(string name, string description = "")
         {
             var node = new ExtentTest(Extent, name, description);
@@ -81,7 +87,7 @@ namespace AventStack.ExtentReports
         {
             if (Model.HasChildren)
             {
-                Model.NodeContext.Remove(test.Model);
+                ApplyRemoveCommonNodeSettings(test);
             }
         }
 
