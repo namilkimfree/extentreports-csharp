@@ -1,6 +1,13 @@
 
 ### Fixed Issue 
 
+## ExtentReports.BugFix 4.2.3
+* Published this package in nuget. nuget link: https://www.nuget.org/packages/ExtentReports.BugFix/4.2.3
+* fixed: an issue remove test doesn't test in ExtentTest class
+* feat: a razor engine template encoding type add
+* feat: a sparkdashboard [feature, scenario and step] chart's accordion collaspse/expand feature added
+
+
 ## ExtentReports.BugFix 4.2.2
 * Published this package in nuget. nuget link: https://www.nuget.org/packages/ExtentReports.BugFix/4.2.2
 * fixed: an issue timeline is not displayed when timeline set to true
