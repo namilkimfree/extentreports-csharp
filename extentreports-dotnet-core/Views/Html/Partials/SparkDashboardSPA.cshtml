@@ -48,7 +48,7 @@
 	<div class="row">
         <div class="@boxSize">
                 <div class="card" id=@parentHeading>
-                    <div class="card-header">
+                    <div class="card-header" data-toggle="collapse" data-parent='#@parentHeading-Body' href='#@parentHeading-Body' aria-expanded="True" aria-controls=@parentHeading>
                         <h6 class="card-title">
                             @if (IsAccordionchard())
                             {
@@ -87,7 +87,7 @@
 		{
 		<div class="@boxSize">
 			<div class="card" id=@childHeading>
-                <div class="card-header">
+                <div class="card-header" data-toggle="collapse" data-parent='#@childHeading-Body' href='#@childHeading-Body' aria-expanded="False" aria-controls='@childHeading-Body'>
                     <h6 class="card-title">
                         @if (IsAccordionchard())
                         {
@@ -123,7 +123,7 @@
 		{
 		<div class="@boxSize">
 			<div class="card" id=@grandChildHeading>
-                <div class="card-header">
+                <div class="card-header" data-toggle="collapse" data-parent='#@grandChildHeading-Body' href='#@grandChildHeading-Body' aria-expanded="False" aria-controls='@grandChildHeading-Body'>
                     <h6 class="card-title">
                         @if (IsAccordionchard())
                         {
