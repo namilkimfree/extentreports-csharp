@@ -2,12 +2,6 @@
 ### Fixed Issue 
 
 ## ExtentReports.BugFix 4.2.3
-* Published this package in nuget. nuget link: https://www.nuget.org/packages/ExtentReports.BugFix/4.2.3
-* fixed: an issue remove test doesn't test in ExtentTest class
-* feat: a razor engine template encoding type add
-* feat: a sparkdashboard [feature, scenario and step] chart's accordion collaspse/expand feature added
-![alt text](https://github.com/namilkimfree/extentreports-csharp/blob/image_assets/extentreports-dotnet-core/ImageAssets/accordion%20chart.jpg)
-
 
 * EncodedStringFactory 
 ```csharp
@@ -23,6 +17,11 @@ var htmlReporter = new ExtentHtmlReporter(Path.Combine(path));
 htmlReporter.Config.DashboardStyle = DashboardStyle.AccordionChart; 
 ```
 
+* Published this package in nuget. nuget link: https://www.nuget.org/packages/ExtentReports.BugFix/4.2.3
+* fixed: an issue remove test doesn't test in ExtentTest class
+* feat: a razor engine template encoding type add
+* feat: a sparkdashboard [feature, scenario and step] chart's accordion collaspse/expand feature added
+![alt text](https://github.com/namilkimfree/extentreports-csharp/blob/image_assets/extentreports-dotnet-core/ImageAssets/accordion%20chart.jpg)
 
 ## ExtentReports.BugFix 4.2.2
 * Published this package in nuget. nuget link: https://www.nuget.org/packages/ExtentReports.BugFix/4.2.2
